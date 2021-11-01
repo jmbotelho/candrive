@@ -1,0 +1,195 @@
+@import url(normalize.css);
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap");
+
+:root {
+  --colour-post-border: #dddddd;
+  --colour-control-label: #888888;
+  --colour-control-border: #bababa;
+  --colour-user-item-border: #e5e5e5;
+  --colour-user-item-even: #ffffff;
+  --colour-user-item-odd: #fafafa;
+  --colour-user-items-text: #dddddd;
+  --colour-user-items-img: #d4d4d4;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 62.5%;
+}
+
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+label {
+  display: block;
+}
+
+.container {
+  padding: 1.5rem;
+}
+
+.block__header {
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+.breadcrumb {
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+/* User Controls */
+.controls {
+  margin: 1rem 0;
+}
+
+.control {
+  margin-bottom: 0.5rem;
+}
+
+.control label {
+  color: var(--colour-control-label);
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin-bottom: 0.2rem;
+}
+
+.control input,
+.control select {
+  border: 1px solid var(--colour-control-border);
+  font-size: 1.4rem;
+  padding: 0.2rem;
+  width: 20rem;
+}
+
+/* User List */
+.users {
+  font-size: 1.4rem;
+}
+
+.user__item {
+  align-items: center;
+  border-top: 1px solid var(--colour-user-item-border);
+  display: flex;
+  padding: 15px;
+  width: 100%;
+}
+
+.user__item:nth-child(odd) {
+  background-color: var(--colour-user-item-odd);
+}
+
+.user__details {
+  padding: 10px;
+}
+
+.user__img {
+  background-color: var(--colour-user-items-img);
+  border-radius: 25px;
+  height: 50px;
+  width: 50px;
+}
+
+/* User Details */
+.details__block {
+  padding: 1.5rem 0;
+}
+
+.details__title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.details__item,
+.details__item--italicized {
+  font-size: 1.4rem;
+  padding: 0;
+}
+
+.details__item--italicized {
+  font-style: italic;
+}
+
+/* Posts */
+.posts {
+  border-top: 1px solid var(--colour-post-border);
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+.post {
+  border-bottom: 1px solid var(--colour-post-border);
+  padding: 1.5rem 0;
+}
+
+.post__title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.post__body {
+  font-size: 1.4rem;
+  padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+
+  /* Controls */
+  .controls {
+    display: flex;
+    justify-content: right;
+  }
+
+  .control {
+    margin-left: 15px;
+  }
+
+  /* Posts */
+  .posts {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .post,
+  .details__block {
+    border: 1px solid var(--colour-post-border);
+    flex: 0 32%;
+    margin-bottom: 2%;
+    padding: 1rem;
+  }
+
+  /* User details */
+  .user__details {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
